@@ -1,0 +1,70 @@
+{
+    "layer": "top",
+    "position": "top",
+    //"height": 30,
+    // "width": 1920,
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "network", "backlight", "temperature", "battery", "clock"],
+    // Modules configuration
+    "battery": {
+        "interval": 1,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
+    "backlight": {
+        "interval": 1,
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""]
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%a %Y-%m-%d|%T}",
+        "tooltip": false
+    },
+    "network": {
+        "interval": 5,
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " Online",
+        "format-linked": " Linked",
+        "format-disconnected": " No Internet",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "interval": 1,
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "temperature": {
+        "interval": 1,
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 50,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    }
+}

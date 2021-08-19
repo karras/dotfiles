@@ -1,0 +1,121 @@
+
+/*================================================
+ *
+ * Waybar Style Configuration
+ *
+ *==============================================*/
+
+/*--------------------
+ * Colors
+ *------------------*/
+
+/* Nord Color Scheme */
+@define-color night1 #2e3440;
+@define-color night2 #3b4252;
+@define-color night3 #434c5e;
+@define-color night4 #4c566a;
+
+@define-color snow1 #d8dee9;
+@define-color snow2 #e5e9f0;
+@define-color snow3 #eceff4;
+
+@define-color frost1 #8fbcbb;
+@define-color frost2 #88c0d0;
+@define-color frost3 #81a1c1;
+@define-color frost4 #5e81ac;
+
+@define-color aurora1 #bf616a;
+@define-color aurora2 #d08770;
+@define-color aurora3 #ebcb8b;
+@define-color aurora4 #a3be8c;
+@define-color aurora5 #b48ead;
+
+/* Blink Color - Critical */
+@keyframes blink-critical {
+    70% {
+        border-bottom: 2px solid @aurora4;
+        color: @aurora4;
+    }
+
+    to {
+        border-bottom: 2px solid @aurora1;
+        color: @aurora1;
+    }
+}
+
+/*--------------------
+ * Styles
+ *------------------*/
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Source Code Pro;
+    font-size: 10pt;
+}
+
+window#waybar {
+    background-color: @night1;
+    color: @aurora4;
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#custom-media,
+#disk,
+#idle_inhibitor,
+#language,
+#memory,
+#mode,
+#mpd,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 12px;
+    border-bottom: 2px solid @aurora4;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#battery.warning:not(.charging) {
+    border-bottom: 2px solid @aurora3;
+    color: @aurora3;
+}
+
+#battery.critical:not(.charging) {
+    border-bottom: 2px solid @aurora1;
+    color: @aurora1;
+    animation-name: blink-critical;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected {
+    border-bottom: 2px solid @aurora3;
+    color: @aurora3;
+}
+
+#temperature.critical {
+    border-bottom: 2px solid @aurora1;
+    color: @aurora1;
+    animation-name: blink-critical;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
