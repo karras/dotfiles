@@ -36,7 +36,7 @@
         "format-wifi": " {essid} ({signalStrength}%)",
         "format-ethernet": " Online",
         "format-linked": " Linked",
-        "format-disconnected": " No Internet",
+        "format-disconnected": " Offline",
         "tooltip": false
     },
     "pulseaudio": {
