@@ -1,5 +1,5 @@
 
-PACKAGES = backgrounds environment git nvim user-dirs waybar wayfire zsh
+PACKAGES = backgrounds environment git nvim terminator user-dirs waybar wayfire zsh
 
 install:
 	stow --no-folding -t ~/ ${PACKAGES}
