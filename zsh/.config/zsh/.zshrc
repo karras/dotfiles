@@ -140,3 +140,16 @@ alias vim='nvim'
 ############################
 
 #export GPG_TTY=$(tty)
+
+############################
+# SSH Agent
+############################
+
+# Initialize ssh-agent if not running already
+if ! ps -C ssh-agent > /dev/null; then
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/*.key
+    echo "$SSH_AUTH_SOCK" > ~/.config/ssh_agent_env
+else
+    export SSH_AUTH_SOCK="$(< ~/.config/ssh_agent_env)"
+fi
