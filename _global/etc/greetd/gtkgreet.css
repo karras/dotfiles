@@ -1,0 +1,12 @@
+window {
+   background-image: url("file:///usr/share/backgrounds/wallpaper.png");
+   background-size: cover;
+   background-position: center;
+}
+
+box#body {
+   background-color: #2e3440;
+   color: #88c0d0;
+   border-radius: 8px;
+   padding: 50px;
+}
