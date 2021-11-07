@@ -3,10 +3,16 @@
     "position": "top",
     //"height": 30,
     // "width": 1920,
-    "modules-left": [],
+    "modules-left": ["wlr/taskbar"],
     "modules-center": [],
     "modules-right": ["pulseaudio", "network", "backlight", "temperature", "battery", "clock"],
     // Modules configuration
+    "backlight": {
+        "interval": 1,
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", ""]
+    },
     "battery": {
         "interval": 1,
         "states": {
@@ -18,12 +24,6 @@
         "format-plugged": " {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
-    },
-    "backlight": {
-        "interval": 1,
-        // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", ""]
     },
     "clock": {
         "interval": 1,
@@ -65,6 +65,12 @@
         "critical-threshold": 50,
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+    "wlr/taskbar": {
+        "icon-size": 14,
+        "active-first": false,
+        "on-click": "activate",
         "tooltip": false
     }
 }

@@ -66,21 +66,33 @@ window#waybar {
     color: @aurora4;
 }
 
+/* Modules Left */
+#taskbar {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 12px;
+    border-bottom: 2px solid @aurora4;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#taskbar button {
+    padding: 2px 1px 2px 2px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+#taskbar button.active {
+    background-color: @aurora4;
+}
+
+/* Modules Right */
 #backlight,
 #battery,
 #clock,
-#cpu,
-#custom-media,
-#disk,
-#idle_inhibitor,
-#language,
-#memory,
-#mode,
-#mpd,
 #network,
 #pulseaudio,
-#temperature,
-#tray {
+#temperature {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 12px;
