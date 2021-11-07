@@ -13,9 +13,9 @@ The following configurations are covered:
 * GTK 3.0
 * Neovim
 * Terminator
-* XDG user directories
 * Waybar
 * Wayfire
+* XDG user directories
 * ZSH
 
 ## Dependencies
