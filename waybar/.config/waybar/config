@@ -3,7 +3,7 @@
     "position": "top",
     //"height": 30,
     // "width": 1920,
-    "modules-left": ["wlr/taskbar"],
+    "modules-left": ["tray", "wlr/taskbar"],
     "modules-center": [],
     "modules-right": ["pulseaudio", "network", "backlight", "temperature", "battery", "clock"],
     // Modules configuration
@@ -66,6 +66,9 @@
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""],
         "tooltip": false
+    },
+    "tray": {
+        "icon-size": 14
     },
     "wlr/taskbar": {
         "icon-size": 14,
