@@ -9,6 +9,7 @@ The following configurations are covered:
 * Background images
 * Environment variables
 * Git
+* GNUPG
 * Greetd
 * GTK 3.0
 * Neovim
