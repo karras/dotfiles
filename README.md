@@ -9,6 +9,8 @@ The following configurations are covered:
 * Background images
 * Environment variables
 * Git
+* Greetd
+* GTK 3.0
 * Neovim
 * Terminator
 * XDG user directories
