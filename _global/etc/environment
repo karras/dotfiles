@@ -3,5 +3,9 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
+
+# Tell Firefox we run Wayland
 MOZ_ENABLE_WAYLAND=1
+
+# Disable AT-SPI2
 NO_AT_BRIDGE=1
