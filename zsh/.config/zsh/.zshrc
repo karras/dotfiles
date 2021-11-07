@@ -139,7 +139,8 @@ alias vim='nvim'
 # Exports
 ############################
 
-#export GPG_TTY=$(tty)
+# Pinentry curses/TTY
+export GPG_TTY=$(tty)
 
 ############################
 # SSH Agent
