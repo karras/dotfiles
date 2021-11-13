@@ -20,6 +20,10 @@ The following configurations are covered:
 * XDG user directories
 * ZSH
 
+## Styling
+
+Whenever possible the [Nord theme](https://www.nordtheme.com/) is applied.
+
 ## Dependencies
 
 The dotfiles are managed using [GNU Stow](https://www.gnu.org/software/stow/).
