@@ -30,9 +30,6 @@ The dotfiles are managed using [GNU Stow](https://www.gnu.org/software/stow/).
   make install
   ```
 
-* Deploy the additional files in the `[_global][./_global] directory manually
-  as they are not managed by Stow
-
 ## Contributions
 
 Feel free to open an issue or pull request.
