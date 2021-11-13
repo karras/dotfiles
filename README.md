@@ -13,6 +13,7 @@ The following configurations are covered:
 * Greetd
 * GTK 3.0
 * Neovim
+* Swaylock
 * Terminator
 * Waybar
 * Wayfire
