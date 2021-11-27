@@ -26,22 +26,35 @@ WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 # History
 ############################
 
-HISTFILE=~/.local/share/histfile
+# Create ZSH state directory
+[[ -d "$XDG_STATE_HOME/zsh" ]] || mkdir -p "$XDG_STATE_HOME/zsh"
+
+HISTFILE="$XDG_STATE_HOME/zsh/zhistory"
 HISTSIZE=10000
 SAVEHIST=10000
+
+# Write commands to history immediately without waiting on shell exit
+setopt inc_append_history
+
+# Do not write duplicate commands to the history
+setopt hist_ignore_dups
 
 ############################
 # Completion
 ############################
 
+# Create ZSH cache directory
+[[ -d "$XDG_CACHE_HOME/zsh" ]] || mkdir -p "$XDG_CACHE_HOME/zsh"
+
 # Compinstall file path
-zstyle :compinstall filename '~/.config/zsh/.zshrc'
+zstyle :compinstall filename '$XDG_CONFIG_HOME/zsh/.zshrc'
 
 # Do not insert actual tabs
 zstyle ':completion:*' insert-tab false
 
 # Load completion
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
 
 ############################
 # Prompt
@@ -150,7 +163,7 @@ export GPG_TTY=$(tty)
 if ! ps -C ssh-agent > /dev/null; then
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/*.key
-    echo "$SSH_AUTH_SOCK" > ~/.config/ssh_agent_env
+    echo "$SSH_AUTH_SOCK" > "$XDG_CACHE_HOME/ssh_agent_env"
 else
-    export SSH_AUTH_SOCK="$(< ~/.config/ssh_agent_env)"
+    export SSH_AUTH_SOCK="$(< $XDG_CACHE_HOME/ssh_agent_env)"
 fi

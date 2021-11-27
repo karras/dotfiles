@@ -20,21 +20,32 @@ The following configurations are covered:
 * XDG user directories
 * ZSH
 
+## Structure
+
+The structure and placement of all files is heavily inspired by [Ayekat's
+dotfiles approach](https://github.com/ayekat/dotfiles), kudos to him!
+
+### XDG Paths
+
+| Variable          | Location                 |
+| ----------------- | ------------------------ |
+| `XDG_CACHE_HOME`  | `$HOME/.local/var/cache` |
+| `XDG_CONFIG_HOME` | `$HOME/.local/etc`       |
+| `XDG_DATA_HOME`   | `$HOME/.local/share`     |
+| `XDG_STATE_HOME`  | `$HOME/.local/var/lib`   |
+
 ## Styling
 
 Whenever possible the [Nord theme](https://www.nordtheme.com/) is applied.
 
-## Dependencies
+## Installation
 
-The dotfiles are managed using [GNU Stow](https://www.gnu.org/software/stow/).
+* Clone this repository to the destination of your choice (e.g.
+  `~/git/dotfiles`)
 
-## Usage
+* Install all dotfiles, make sure the `~/.local` directory is removed first:
 
-* Install all dotfiles:
   ```sh
-  make install
+  cd ~
+  ln -s /path/to/this/repo .local
   ```
-
-## Contributions
-
-Feel free to open an issue or pull request.
