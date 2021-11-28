@@ -1,7 +1,12 @@
+##################################################
+#
+# ZSH Configuration
+#
+##################################################
 
-############################
+######################
 # General
-############################
+######################
 
 # Disable automatically switching into directories
 unsetopt autocd 
@@ -22,9 +27,9 @@ bindkey "^U" backward-kill-line
 # next slash
 WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
-############################
+######################
 # History
-############################
+######################
 
 # Create ZSH state directory
 [[ -d "$XDG_STATE_HOME/zsh" ]] || mkdir -p "$XDG_STATE_HOME/zsh"
@@ -39,9 +44,9 @@ setopt inc_append_history
 # Do not write duplicate commands to the history
 setopt hist_ignore_dups
 
-############################
+######################
 # Completion
-############################
+######################
 
 # Create ZSH cache directory
 [[ -d "$XDG_CACHE_HOME/zsh" ]] || mkdir -p "$XDG_CACHE_HOME/zsh"
@@ -56,9 +61,9 @@ zstyle ':completion:*' insert-tab false
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
 
-############################
+######################
 # Prompt
-############################
+######################
 
 # Load VCS info
 autoload -Uz vcs_info
@@ -140,24 +145,24 @@ precmd() {
     fi
 }
 
-############################
+######################
 # Aliases
-############################
+######################
 
 alias ll='ls -al'
 alias vi='nvim'
 alias vim='nvim'
 
-############################
+######################
 # Exports
-############################
+######################
 
 # Pinentry curses/TTY
 export GPG_TTY=$(tty)
 
-############################
+######################
 # SSH Agent
-############################
+######################
 
 # Initialize ssh-agent if not running already
 if ! ps -C ssh-agent > /dev/null; then
