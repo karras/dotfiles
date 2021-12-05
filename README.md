@@ -5,7 +5,7 @@ Nothing special, simply my dotfiles for everyday use.
 ## Structure
 
 The structure and placement of all files is heavily inspired by the mighty and
-awesome [Ayekat](https://github.com/ayekat/dotfiles).
+awesome [Ayekat](https://github.com/ayekat/dotfiles)!
 
 Basically the main goal is to keep the home directory as clean as possible. I
 would **not recommend** to use it as a plug'n play setup!
@@ -29,11 +29,11 @@ Due to the deprecation of
 [pam\_env](https://github.com/linux-pam/linux-pam/releases/tag/v1.5.0) it
 heavily depends on the chosen login flow (i.e. headless, Wayland-based, etc.)
 how to ideally inject the necessary environment variables. There is often a
-chicken and egg problem related to `XDG_CONFIG_HOME` as it's customization must
+chicken and egg problem related to `XDG_CONFIG_HOME` as its customization must
 be injected as early as possible otherwise the systemd user variables are not
 loaded either.
 
-In this case the problem is solved (read glued and hacked together) via a
+In this case the problem is solved (read "glued and hacked together") via a
 separate `wayfire-run` wrapper script which loads all environment variables and
 then finally starts Wayfire. The login flow looks like this:
 
