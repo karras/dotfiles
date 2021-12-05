@@ -3,4 +3,4 @@
 FAKE_HOME="${XDG_CACHE_HOME}/ansible"
 readonly FAKE_HOME
 
-env HOME="${FAKE_HOME}" /usr/bin/ansible "$@"
+env HOME="${FAKE_HOME}" /usr/bin/${0##*/} "${@}"
