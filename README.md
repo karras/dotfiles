@@ -23,6 +23,12 @@ are customized as follows:
 | `XDG_DATA_HOME`   | `$HOME/.local/share`     |
 | `XDG_STATE_HOME`  | `$HOME/.local/var/lib`   |
 
+Also the `PATH` is extended by the below paths:
+
+| Path               | Purpose                     |
+| ------------------ | --------------------------- |
+| `$HOME/.local/bin` | Custom scripts and wrappers |
+
 ## Dependencies
 
 Due to the deprecation of
