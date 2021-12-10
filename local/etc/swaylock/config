@@ -1,7 +1,7 @@
 daemonize
 ignore-empty-password
 
-image=/usr/share/backgrounds/wallpaper.png
+image=$XDG_DATA_HOME/backgrounds/wallpaper_lockscreen.png
 font='Source Code Pro'
 
 line-uses-inside
