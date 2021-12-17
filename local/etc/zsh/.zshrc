@@ -8,13 +8,17 @@
 # General
 ######################
 
-# Disable automatically switching into directories
-unsetopt autocd 
+# Emacs mode
+bindkey -e
+
 # Disable beeps
 unsetopt beep
 
-# Emacs mode
-bindkey -e
+# Disable automatically switching into directories
+unsetopt autocd
+
+# Disable iterating through the available paths when hitting tab
+setopt noautomenu
 
 # Allow jumping between words with CTRL + arrow keys
 bindkey ";5C" forward-word
