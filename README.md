@@ -45,17 +45,23 @@ then finally starts Wayfire. The login flow looks like this:
 
 ```text
 Boot
-  --> greetd
-      --> greetd-gtkgreet
-          --> wayfire-run
-              --> wayfire
+--> greetd
+    --> greetd-gtkgreet
+        --> wayfire-run
+            --> wayfire
 ```
+
+The [wayfire-run
+script](https://github.com/karras/ansible-collection-workstation/tree/main/roles/wayfire)
+is deployed and managed via Ansible.
 
 ## Components
 
 Whenever possible only GTK-based (3.0+) applications are used and the overall
-application bloat should be kept at a minimum. Also when configurable the
-awesome [Nord theme](https://www.nordtheme.com/) is applied.
+application bloat should be kept at a minimum.
+
+Also, when configurable, the awesome [Nord theme](https://www.nordtheme.com/)
+is applied.
 
 Below is an incomplete list of the covered main components:
 
@@ -65,12 +71,13 @@ Below is an incomplete list of the covered main components:
   - [Terminator](https://github.com/gnome-terminator/terminator)
   - [ZSH](https://www.zsh.org/)
 * Desktop
-  - [Greetd-gtkgreet](https://git.sr.ht/~kennylevinsen/gtkgreet)
+  - [bemenu](https://github.com/Cloudef/bemenu)
+  - [greetd-gtkgreet](https://git.sr.ht/~kennylevinsen/gtkgreet)
   - [Wayfire](https://github.com/WayfireWM/wayfire)
   - [Waybar](https://github.com/Alexays/Waybar)
-  - [Swaylock](https://github.com/swaywm/swaylock)
-  - [Swaybg](https://github.com/swaywm/swaybg)
-  - [Swayidle](https://github.com/swaywm/swayidle)
+  - [swaylock](https://github.com/swaywm/swaylock)
+  - [swaybg](https://github.com/swaywm/swaybg)
+  - [swayidle](https://github.com/swaywm/swayidle)
 
 ## Installation
 
