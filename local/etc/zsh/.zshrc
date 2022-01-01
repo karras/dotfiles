@@ -38,6 +38,7 @@ WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 # Create ZSH state directory
 [[ -d "$XDG_STATE_HOME/zsh" ]] || mkdir -p "$XDG_STATE_HOME/zsh"
 
+# Set history location and size
 HISTFILE="$XDG_STATE_HOME/zsh/zhistory"
 HISTSIZE=10000
 SAVEHIST=10000
@@ -138,8 +139,8 @@ precmd() {
     vcs_info
 
     if [[ -z ${vcs_info_msg_0_} ]]; then
-        # Define prompt if not a git repository
-        # Scheme: '$USER@$HOSTNAME $PWD [$GIT_BRANCH] $ '
+        # Define prompt if NOT a git repository
+        # Scheme: '$USER@$HOSTNAME $PWD $ '
         PROMPT='%{$fg[blue]%}%n%{$reset_color%}@%m %{$fg[yellow]%}%1~%{$reset_color%} %{$fg[blue]%}%#%{$reset_color%} '
 
     else
