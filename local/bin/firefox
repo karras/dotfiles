@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -
 
 FAKE_HOME="${XDG_STATE_HOME}/mozilla"
 readonly FAKE_HOME
