@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -
 
 FAKE_HOME="${XDG_CACHE_HOME}/ansible"
 readonly FAKE_HOME
