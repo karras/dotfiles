@@ -93,3 +93,10 @@ Below is an incomplete list of the covered main components:
   cd ~
   ln -s /path/to/this/repo .local
   ```
+
+* Copy your desktop wallpaper to `~/.local/share/backgrounds/wallpaper.png`,
+  which will be used by `swaybg`
+
+* Copy your lock screen wallpaper to
+  `~/.local/share/backgrounds/wallpaper_lockscreen.png`, which will be used by
+  `swaylock`
