@@ -1,0 +1,22 @@
+#!/bin/sh -
+# Lightweight adaptation of passmenu for bemenu and Wayland
+
+shopt -s nullglob globstar
+
+if [[ -n ${WAYLAND_DISPLAY} ]]; then
+    BEMENU=bemenu
+else
+    echo "Error: No Wayland display detected" >&2
+    exit 1
+fi
+
+PREFIX=${PASSWORD_STORE_DIR-~/.password-store}
+PASSWORD_FILES=( "${PREFIX}"/**/*.gpg )
+PASSWORD_FILES=( "${PASSWORD_FILES[@]#"$PREFIX"/}" )
+PASSWORD_FILES=( "${PASSWORD_FILES[@]%.gpg}" )
+
+PASSWORD=$(printf '%s\n' "${PASSWORD_FILES[@]}" | "${BEMENU}" "$@")
+
+[[ -n ${PASSWORD} ]] || exit
+
+pass show -c "$PASSWORD" 2>/dev/null
