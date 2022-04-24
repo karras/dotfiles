@@ -1,0 +1,44 @@
+##################################################
+#
+# Mako Configuration
+#
+##################################################
+
+######################
+# Global Settings
+######################
+
+max-history=5
+sort=-time
+actions=0
+layer=overlay
+anchor=top-right
+default-timeout=5000
+ignore-timeout=1
+
+######################
+# Style (Nord Theme)
+######################
+
+font=Source Code Pro 10
+text-color=#d8dee9
+background-color=#2e3440
+border-color=#d8dee9
+border-size=1
+border-radius=2
+width=300
+height=110
+icons=0
+max-icon-size=64
+
+######################
+# Urgency Settings
+######################
+
+[urgency=normal]
+border-color=#ebcb8b
+text-color=#ebcb8b
+
+[urgency=high]
+border-color=#bf616a
+text-color=#bf616a
