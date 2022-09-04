@@ -4,11 +4,12 @@ Nothing special, simply my dotfiles for everyday use.
 
 ## Structure
 
+Basically the main goal is to keep the home directory as clean as possible by
+forcing *everything* to be stored in `.local`. I would **not recommend** to use
+it as a plug'n play setup!
+
 The structure and placement of all files is heavily inspired by the awesome
 [Ayekat](https://github.com/ayekat/dotfiles)!
-
-Basically the main goal is to keep the home directory as clean as possible. I
-would **not recommend** to use it as a plug'n play setup!
 
 ### XDG Paths
 
@@ -23,7 +24,7 @@ are customized as follows:
 | `XDG_DATA_HOME`   | `$HOME/.local/share`     |
 | `XDG_STATE_HOME`  | `$HOME/.local/var/lib`   |
 
-Also the `PATH` is extended by the below paths:
+Also `PATH` is extended by the below paths:
 
 | Path               | Purpose                     |
 | ------------------ | --------------------------- |
