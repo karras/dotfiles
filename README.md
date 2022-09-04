@@ -75,6 +75,7 @@ Below is an incomplete list of the covered main components:
 * Desktop
   - [bemenu](https://github.com/Cloudef/bemenu)
   - [greetd-gtkgreet](https://git.sr.ht/~kennylevinsen/gtkgreet)
+  - [mako](https://github.com/emersion/mako)
   - [Wayfire](https://github.com/WayfireWM/wayfire)
   - [Waybar](https://github.com/Alexays/Waybar)
   - [swaylock](https://github.com/swaywm/swaylock)
