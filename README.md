@@ -5,11 +5,11 @@ Nothing special, simply my dotfiles for everyday use.
 ## Structure
 
 The main goal is to keep the home directory as clean as possible by forcing
-*everything* to be stored in `.local`. I would **not recommend** to use it as a
-plug'n play setup!
+*everything* to be stored in `~/.local`. I would **not recommend** to use it as
+a plug'n play setup!
 
 The structure and placement of all files is heavily inspired by the awesome
-[Ayekat](https://github.com/ayekat/dotfiles)!
+[Ayekat](https://github.com/ayekat/localdir)!
 
 ### XDG Paths
 
