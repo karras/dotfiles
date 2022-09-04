@@ -4,9 +4,9 @@ Nothing special, simply my dotfiles for everyday use.
 
 ## Structure
 
-Basically the main goal is to keep the home directory as clean as possible by
-forcing *everything* to be stored in `.local`. I would **not recommend** to use
-it as a plug'n play setup!
+The main goal is to keep the home directory as clean as possible by forcing
+*everything* to be stored in `.local`. I would **not recommend** to use it as a
+plug'n play setup!
 
 The structure and placement of all files is heavily inspired by the awesome
 [Ayekat](https://github.com/ayekat/dotfiles)!
@@ -29,6 +29,9 @@ Also `PATH` is extended by the below paths:
 | Path               | Purpose                     |
 | ------------------ | --------------------------- |
 | `$HOME/.local/bin` | Custom scripts and wrappers |
+
+Most [wrapper scripts](./local/bin) are required for those applications which
+do not support custom XDG paths (e.g. Ansible or Firefox).
 
 ## Dependencies
 
