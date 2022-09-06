@@ -157,6 +157,9 @@ precmd() {
 alias ll='ls -al'
 alias vi='nvim'
 alias vim='nvim'
+alias gitc='git commit'
+alias gitp='git push'
+alias gits='git status'
 
 ######################
 # Exports
