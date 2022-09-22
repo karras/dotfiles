@@ -1,5 +1,4 @@
 [global_config]
-  focus = mouse
   title_hide_sizetext = True
   title_transmit_fg_color = "#2e3440"
   title_transmit_bg_color = "#a3be8c"
