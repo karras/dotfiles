@@ -89,6 +89,10 @@ window#waybar {
     background-color: @aurora4;
 }
 
+#taskbar.empty {
+    border-bottom: none;
+}
+
 /* Modules Right */
 #backlight,
 #battery,
