@@ -13,3 +13,7 @@ set smartindent
 " Add colored ruler at 80 characters
 set colorcolumn=80
 set ruler
+
+" Restore the old colors
+set termguicolors notgc
+colorscheme vim
