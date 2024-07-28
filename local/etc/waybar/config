@@ -20,7 +20,8 @@
         "interval": 1,
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "tooltip": false
     },
     //--------------------
     // Battery Module
