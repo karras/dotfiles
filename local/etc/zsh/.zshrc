@@ -180,3 +180,11 @@ if ! ps -C ssh-agent > /dev/null; then
 else
     export SSH_AUTH_SOCK="$(< $XDG_CACHE_HOME/ssh_agent_env)"
 fi
+
+######################
+# Includes
+######################
+
+if [[ -f "$XDG_STATE_HOME/private/zsh/config" ]]; then
+    source "$XDG_STATE_HOME/private/zsh/config"
+fi
