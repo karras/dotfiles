@@ -68,7 +68,7 @@ is deployed and managed via Ansible.
 
 ## Components
 
-Whenever possible only GTK-based (3.0+) applications are used and the overall
+Whenever possible only GTK-based applications are used and the overall
 application bloat should be kept at a minimum. Also, when configurable, the
 awesome [Nord theme](https://www.nordtheme.com/) is applied.
 
