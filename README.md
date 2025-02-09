@@ -33,6 +33,13 @@ Also `PATH` is extended by the below paths:
 Most [wrapper scripts](./local/bin) are required for those applications which
 do not support custom XDG paths (e.g. Ansible or Firefox).
 
+### Private Configs
+
+Files and configs that may differ between work and home devices and should not
+be published are located in `$HOME/.local/var/lib/private`.
+
+Tools like git or ZSH will fetch additional settings from there as needed.
+
 ## Dependencies
 
 Due to the deprecation of
