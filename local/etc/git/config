@@ -1,13 +1,11 @@
 [core]
-editor = nvim
-
-[user]
-email      = karras@0x539.ch
-name       = Michael Hofer
-signingkey = BE4F5140A497F55637A0F1323269D28E259A072F
+    editor = nvim
 
 [commit]
-gpgsign = true
+    gpgsign = true
 
 [gpg]
-program = gpg2
+    program = gpg2
+
+[include]
+    path = ~/.local/var/lib/private/git/config
