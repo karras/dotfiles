@@ -89,6 +89,10 @@ Below is an incomplete list of the covered main components:
   - [swaybg](https://github.com/swaywm/swaybg)
   - [swayidle](https://github.com/swaywm/swayidle)
 
+### Screenshots
+
+![Desktop](./docs/desktop.png)
+
 ## Installation
 
 * Clone this repository to the destination of your choice (e.g.
