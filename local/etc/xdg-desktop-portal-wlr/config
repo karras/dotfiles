@@ -1,0 +1,15 @@
+##################################################
+#
+# XDG Desktop Portal WLR Configuration
+#
+##################################################
+
+######################
+# Screencast Settings
+######################
+
+[screencast]
+output_name=
+max_fps=30
+chooser_type=dmenu
+chooser_cmd=bemenu --prompt='Select the monitor to share:'
