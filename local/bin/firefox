@@ -3,4 +3,7 @@
 FAKE_HOME="${XDG_STATE_HOME}/mozilla"
 readonly FAKE_HOME
 
+ln -s "${XDG_DESKTOP_DIR}" "${FAKE_HOME}/Desktop"
+ln -s "${XDG_DOWNLOAD_DIR}" "${FAKE_HOME}/Downloads"
+
 env HOME="${FAKE_HOME}" /usr/bin/firefox "$@"
