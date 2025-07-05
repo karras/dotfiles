@@ -1,0 +1,14 @@
+#!/bin/sh -
+
+FAKE_HOME="${XDG_STATE_HOME}/chromium"
+readonly FAKE_HOME
+
+if [ ! -L "${FAKE_HOME}/Desktop" ]; then
+    ln -s "${XDG_DESKTOP_DIR}" "${FAKE_HOME}/Desktop"
+fi
+
+if [ ! -L "${FAKE_HOME}/Downloads" ]; then
+    ln -s "${XDG_DOWNLOAD_DIR}" "${FAKE_HOME}/Downloads"
+fi
+
+env HOME="${FAKE_HOME}" /usr/bin/chromium "$@"
