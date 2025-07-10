@@ -1,0 +1,6 @@
+#!/bin/sh -
+
+CONFIG_DIR="${XDG_STATE_HOME}/claws-mail"
+readonly CONFIG_DIR
+
+/usr/bin/claws-mail --alternate-config-dir ${CONFIG_DIR} "$@"
