@@ -71,22 +71,38 @@ window#waybar {
 /* Modules Left */
 #taskbar,
 #tray {
+    border-bottom: 2px solid @aurora4;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 12px;
-    border-bottom: 2px solid @aurora4;
     padding-bottom: 5px;
     padding-left: 5px;
     padding-right: 5px;
 }
 
 #taskbar button {
-    padding: 2px 1px 2px 2px;
     border-radius: 3px 3px 3px 3px;
+    padding: 2px 1px 2px 2px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#taskbar button:hover {
+    background: @night1;
+    border: @night1;
+    box-shadow: inherit;
+    text-shadow: inherit;
 }
 
 #taskbar button.active {
     background-color: @aurora4;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#taskbar button.active:hover {
+    background: @aurora4;
+    border: @night1;
+    box-shadow: inherit;
+    text-shadow: inherit;
 }
 
 #taskbar.empty {
@@ -99,11 +115,12 @@ window#waybar {
 #clock,
 #network,
 #pulseaudio,
-#temperature {
+#temperature,
+#workspaces {
+    border-bottom: 2px solid @aurora4;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 12px;
-    border-bottom: 2px solid @aurora4;
     padding-bottom: 5px;
     padding-left: 5px;
     padding-right: 5px;
@@ -115,13 +132,13 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-    border-bottom: 2px solid @aurora1;
-    color: @aurora1;
     animation-name: blink-critical;
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    border-bottom: 2px solid @aurora1;
+    color: @aurora1;
 }
 
 #network.disconnected {
@@ -130,11 +147,42 @@ window#waybar {
 }
 
 #temperature.critical {
-    border-bottom: 2px solid @aurora1;
-    color: @aurora1;
     animation-name: blink-critical;
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    border-bottom: 2px solid @aurora1;
+    color: @aurora1;
+}
+
+#workspaces button {
+    color: @aurora4;
+    padding: 2px 1px 2px 2px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: @night1;
+    border: @night1;
+    color: @aurora4;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    color: @aurora1;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button.focused:hover {
+    background: @night1;
+    border: @night1;
+    color: @aurora1;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces.empty {
+    border-bottom: none;
 }

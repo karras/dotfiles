@@ -12,7 +12,7 @@
     // "width": 1920,
     "modules-left": ["tray", "wlr/taskbar"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "backlight", "temperature", "battery", "clock"],
+    "modules-right": ["wayfire/workspaces", "pulseaudio", "network", "backlight", "temperature", "battery", "clock"],
     //--------------------
     // Backlight Module
     //--------------------
@@ -105,5 +105,19 @@
         "active-first": false,
         "on-click": "activate",
         "tooltip": false
+    },
+    //--------------------
+    // Workspaces Module
+    //--------------------
+    "wayfire/workspaces": {
+        "disable-click": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "default": "",
+        }
     }
 }
