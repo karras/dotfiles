@@ -1,0 +1,6 @@
+#!/bin/sh -
+
+FAKE_HOME="${XDG_STATE_HOME}/runelite"
+readonly FAKE_HOME
+
+env HOME=${FAKE_HOME} _JAVA_OPTIONS=-Duser.home="${FAKE_HOME}" ${XDG_STATE_HOME}/runelite/RuneLite "$@"
